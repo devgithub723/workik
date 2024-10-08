@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+const App = () => {
+  const connectGitHub = () => {
+    window.location.href = '/auth/github'; // Redirect to your backend for OAuth
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Automatic GitHub PR Review System</h1>
+      <button onClick={connectGitHub}>Connect GitHub</button>
     </div>
   );
-}
+};
 
 export default App;
